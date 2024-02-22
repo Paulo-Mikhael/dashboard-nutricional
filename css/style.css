@@ -13,47 +13,262 @@ header{
     align-items: center;
     color: var(--color-font);
     width: 100vw;
-    height: 50px;
-}
-header h1{
-    letter-spacing: 5px;
-    padding-left: 20px;
+    height: 80px;
+
+    & h1{
+        letter-spacing: 5px;
+        padding-left: 20px;
+    }
 }
 section{
     margin: 10px;
     width: 98.5vw;
     display: flex;
-    display: flex;
     justify-content: space-between;
+
+    & h2{
+        color: var(--color-font);
+    }
+    & h3{
+        padding-left: 8px;
+        color: var(--color-infos);
+    }
+    & h4{
+        color: var(--color-items);
+    }
+    & h5{
+        color: var(--color-nutrients);
+    }
+    & .boxes{
+        height: 25vh;
+        width: 40vw;
+        border-radius: 7px;
+        border: 2px solid var(--color-items);
+        background-color: var(--color-background);
+    }
+    & .recommended{
+        width: 57vw;
+    }
+    & .boxes .header{
+        align-items: end;
+        padding: 10px;
+        width: 97%;
+        display: flex;
+    }
+    & input{
+        border-radius: 5px;
+        border: none;
+        background-color: var(--color-font);
+        font-weight: bold;
+        width: 50px;
+        height: 15px;
+        padding: 5px;
+    }
+    & .content{
+        padding: 10px;
+        display: flex;
+        height: 14vh;
+        width: 95%;
+        justify-content: center;
+        align-items: center;
+    }
+    & .info-boxes{
+        padding: 10px;
+        width: 45%;
+        height: 70%;
+        background-color: var(--color-background);
+        border: 2px solid var(--color-font);
+        border-radius: 10px;
+
+        & .nutri-content{
+            padding: 7px;
+            display: grid;
+            grid-template-columns:1fr 1fr;
+        }
+        & .water-content{
+            padding: 7px;
+            & b{
+                font-size: 30px;
+            }
+        }
+    }
+    & .imc-info{
+        & .title{
+            display: flex;
+            align-items: end;
+        }
+        & .header{
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    & .recommended{
+        & .header{
+            padding-bottom: 0px;
+        }
+        & .content{
+            height: 70%;
+            width: 100%;
+            padding: 0;
+            justify-content: space-around;
+        }
+    }
 }
-section h2{
-    color: var(--color-font);
+input:focus{
+    outline: none;
 }
-section h3{
-    padding-left: 8px;
-    color: var(--color-infos);
-}
-section.line-one{
-    margin-top: 20px;
-}
-section .boxes{
-    height: 25vh;
-    width: 40vw;
-    border-radius: 7px;
-    border: 2px solid var(--color-items);
-    background-color: var(--color-background);
-}
-section .recommended{
-    width: 57vw;
-}
-section .boxes .header{
-    align-items: end;
-    padding: 10px;
-    width: 97%;
-    height: 30px;
+.line-two{
     display: flex;
-}
-.imc-info{
-    display: flex;
-    justify-content: center;
+
+    & h3{
+        padding: 0;
+    }
+    & .personalize .boxes{
+        width: 97.5%;
+    }
+    & .personalize .personalize-content{
+        padding: 10px;
+    }
+    & .content{
+        padding: 0;
+        width: 100%;
+        height: 75%;
+        justify-content: space-between;
+
+        & .metas-content{
+            width: 49%;
+        }
+        & .input-content{
+            width: 100%;
+            height: 90%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+
+            & input{
+                width: 80%;
+            }
+            & button{
+                border: none;
+                background-color: transparent;
+
+                & img{
+                    width: 30px;
+                    height: 30px;
+                }
+            }
+        }
+    }
+    & .infos{
+        padding-top: 10px;
+        width: 70vw;
+        display: flex;
+        justify-content: space-between;
+
+        & .boxes{
+            padding: 5px 0px 0px 5px;
+            width: 27vw;
+        }
+        & .metas{
+            width: 41.5vw;
+        }
+        & .user-infos{
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 10px;
+            background-color: var(--color-items-2);
+            width: 95.5%;
+            height: 48%;
+            text-wrap: nowrap;
+            overflow: hidden;
+
+            & h4{
+                color: var(--color-background);
+            }
+        }
+        & .food-content{
+            display: flex;
+            width: 100%;
+            height: 60%;
+            justify-content: space-between;
+            align-items: center;
+
+            & h3{
+                color: var(--color-background);
+            }
+            & .user-foods{
+                padding-right: 20px;
+                width: 60%;
+                height: 80%;
+            }
+            & .user-calories h4{
+                color: var(--color-font);
+                font-size: 25px;
+                padding-right: 13px;
+            }
+        }
+    }
+    & .calculator{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 27vw;
+        height: 56vh;
+        border-radius: 7px;
+        border: 2px solid var(--color-items-2);
+        background-color: var(--color-background);
+
+        & .title{
+            padding: 10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        & h4{
+            font-size: 30px;
+            color: var(--color-items);
+        }
+        & h5{
+            font-size: 20px;
+            color: var(--color-font);
+        }
+        & .calculator-screen{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 10%;
+
+            & input{
+                padding: 8px;
+                width: 90%;
+            }
+        }
+        & .calculator-numbers{
+            height: 65%;
+            width: 90%;
+
+            & .numbers{
+                margin: 7% 0 0 8%;
+                height: 90%;
+                width: 92%;
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            & .number{
+                cursor: pointer;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 10px;
+                color: white;
+                background-color: var(--color-items-2);
+                width: 60%;
+                height: 70%;
+                &.multiplication{
+                    background-color: var(--color-infos);
+                }
+            }
+        }
+    }
 }
