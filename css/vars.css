@@ -1,7 +1,8 @@
 .dashboard{
-    --color-background: #2d4e50;
+    --color-background: #0f3a3d;
     --color-items: #06fc9b;
     --color-items-2: #01fe81;
     --color-infos: #507750;
-    --color-font: #acb0ac;
+    --color-font: #d9dad9;
+    --color-nutrients: #8efcd0;
 }
