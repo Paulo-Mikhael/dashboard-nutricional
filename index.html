@@ -16,14 +16,129 @@
     <section class="line-one">
         <div class="boxes imc-info">
             <div class="header">
-                <h2>IMC</h2>
-                <h3>Insira seu IMC</h3>
+                <div class="title">
+                    <h2>IMC</h2>
+                    <h3>Insira seu IMC</h3>
+                </div>
+                <div class="imc-input">
+                    <input type="text" name="user-imc" id="user-imc" placeholder="IMC" maxlength="6">   
+                </div>
+            </div>
+            <div class="content">
+                <div class="warning">
+                    <h4>Insira seu IMC para montar um Dashboard Nutricional adequado;<br><br>
+                    Faça isso multiplicando seu peso pela sua altura na calculadora ao lado ou digite manualmente seu IMC na caixa acima</h4>
+                </div>
             </div>
         </div>
         <div class="boxes recommended">
             <div class="header">
                 <h2>Recomendações</h2>
                 <h3>Porções recomendadas a se consumir diáriamente</h3>
+            </div>
+            <div class="content">
+                <div class="info-boxes">
+                    <h4>Nutrientes</h4>
+                    <div class="nutri-content">
+                        <h5>Vitamina A: 0mg</h5>
+                        <h5>Vitamina C: 0mg</h5>
+                        <h5>Vitamina D: 0mg</h5>
+                        <h5>Vitamina B1: 0mg</h5>
+                        <h5>Vitamina E: 0mg</h5>
+                        <h5>Vitamina B2: 0mg</h5>
+                    </div>
+                </div>
+                <div class="info-boxes">
+                    <h4>Consumo de água</h4>
+                    <div class="content">
+                        <div class="water-content">
+                            <h5>De acordo com seu IMC, seu consumo diário deve ser: <b>27 Litros</b></h5>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="line-two">
+        <div class="personalize">
+            <div class="boxes personalize-content">
+                <div class="title">
+                    <h2>Personalize ainda mais</h2>
+                    <h3>Defina metas e fale as comidas que você comeu, para receber uma estimativa de calorias consumidas</h3>
+                </div>
+                <div class="content">
+                    <div class="info-boxes metas-content">
+                        <h4>Suas metas</h4>
+                        <div class="input-content">
+                            <input type="text" name="metas-input" id="metas-input" placeholder="Defina suas metas agora!">
+                            <button type="submit"><img src="imagens/adicionar.png" alt="adicionar.png"></button>
+                        </div>
+                    </div>
+                    <div class="info-boxes food-content">
+                        <h4>Consumo diário de calorias</h4>
+                        <div class="input-content">
+                            <input type="text" name="metas-input" id="metas-input" placeholder="O que você comeu hoje?">
+                            <button type="submit"><img src="imagens/adicionar.png" alt="adicionar.png"></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="infos">
+                <div class="boxes metas">
+                    <h2>Metas</h2>
+                    <h3>Suas metas definidas</h3>
+                    <div class="user-infos user-metas">
+                        <div class="user-metas-content">
+                            <div class="meta-iten">
+                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
+                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
+                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
+                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
+                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
+                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="boxes foods">
+                    <h2>Consumo aproximado</h2>
+                    <h3>Com base nos nutrientes padrões</h3>
+                    <div class="food-content">
+                        <div class="user-infos user-foods">
+                            <div class="food-iten">
+                                <h3>Jabuticaba - 2307 calorias</h3>
+                            </div>
+                        </div>
+                        <div class="user-calories">
+                            <h4><b id="user-calories-number">10000</b> <br>calorias</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="calculator">
+            <div class="title">
+                <h4>Calculadora de IMC</h4>
+                <h5>Peso X Altura</h5>
+            </div>
+            <div class="calculator-screen">
+                <input type="text" name="calculator-screen" id="calculator-screen" placeholder="0">
+            </div>
+            <div class="calculator-numbers">
+                <div class="numbers">
+                    <div class="number one">1</div>
+                    <div class="number two">2</div>
+                    <div class="number three">3</div>
+                    <div class="number multiplication">X</div>
+                    <div class="number four">4</div>
+                    <div class="number five">5</div>
+                    <div class="number six">6</div>
+                    <div class="number erase">APA</div>
+                    <div class="number seven">7</div>
+                    <div class="number eight">8</div>
+                    <div class="number nine">9</div>
+                    <div class="number zero">0</div>
+                </div>
             </div>
         </div>
     </section>
