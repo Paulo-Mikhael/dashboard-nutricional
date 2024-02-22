@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Electrolize&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    flex-wrap: wrap;
+}
+body{
+    font-family: 'Electrolize', sans-serif;
+    background-color: var(--color-background);
+}
+header{
+    display: flex;
+    align-items: center;
+    color: var(--color-font);
+    width: 100vw;
+    height: 50px;
+}
+header h1{
+    letter-spacing: 5px;
+    padding-left: 20px;
+}
+section{
+    margin: 10px;
+    width: 98.5vw;
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+}
+section h2{
+    color: var(--color-font);
+}
+section h3{
+    padding-left: 8px;
+    color: var(--color-infos);
+}
+section.line-one{
+    margin-top: 20px;
+}
+section .boxes{
+    height: 25vh;
+    width: 40vw;
+    border-radius: 7px;
+    border: 2px solid var(--color-items);
+    background-color: var(--color-background);
+}
+section .recommended{
+    width: 57vw;
+}
+section .boxes .header{
+    align-items: end;
+    padding: 10px;
+    width: 97%;
+    height: 30px;
+    display: flex;
+}
+.imc-info{
+    display: flex;
+    justify-content: center;
+}
