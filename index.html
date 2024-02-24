@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/vars.css">
     <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="imagens/dieta.png">
     <title>Dashboard Nutricional</title>
 </head>
 <body class="dashboard">
@@ -18,41 +19,45 @@
             <div class="header">
                 <div class="title">
                     <h2>IMC</h2>
-                    <h3>Insira seu IMC</h3>
+                    <h3>Insira seu peso e altura</h3>
                 </div>
                 <div class="imc-input">
-                    <input type="text" name="user-imc" id="user-imc" placeholder="IMC" maxlength="6">   
+                    <input type="text" name="user-weight" id="user-weight" placeholder="00.0 kg" maxlength="4">
+                    <button id="btn-imc" onclick="dashboardConfigure()">X</button>
+                    <input type="text" name="user-height" id="user-height" placeholder="0.00" maxlength="4"> 
                 </div>
             </div>
             <div class="content">
                 <div class="warning">
-                    <h4>Insira seu IMC para montar um Dashboard Nutricional adequado;<br><br>
+                    <h4 class="open" id="void">Insira seu IMC para montar um Dashboard Nutricional adequado;<br><br>
                     Faça isso multiplicando seu peso pela sua altura na calculadora ao lado ou digite manualmente seu IMC na caixa acima</h4>
+                    <h4 class="close" id="user-imc-dashboard">Seu IMC é: <b id="imc-value">19,44</b> <br><br>
+                    <em id="user-imc">Você está acima do peso adequado para uma pessoa com esse índice de massa corporal</em></h4>
                 </div>
             </div>
         </div>
         <div class="boxes recommended">
             <div class="header">
                 <h2>Recomendações</h2>
-                <h3>Porções recomendadas a se consumir diáriamente</h3>
+                <h3>Porções <em>recomendadas</em> a se consumir diáriamente</h3>
             </div>
             <div class="content">
                 <div class="info-boxes">
-                    <h4>Nutrientes</h4>
+                    <h4>Porções para um homem adulto</h4>
                     <div class="nutri-content">
-                        <h5>Vitamina A: 0mg</h5>
-                        <h5>Vitamina C: 0mg</h5>
-                        <h5>Vitamina D: 0mg</h5>
-                        <h5>Vitamina B1: 0mg</h5>
-                        <h5>Vitamina E: 0mg</h5>
-                        <h5>Vitamina B2: 0mg</h5>
+                        <h5>Cálcio: 1000mg</h5>
+                        <h5>Ferro: 14mg</h5>
+                        <h5>Proteínas: 60g</h5>
+                        <h5>Minerais: 70mg</h5>
+                        <h5>Carboidratos: 310g</h5>
+                        <h5>Calorias: <b id="info-calories">Calcule seu imc</b></h5>
                     </div>
                 </div>
                 <div class="info-boxes">
                     <h4>Consumo de água</h4>
                     <div class="content">
                         <div class="water-content">
-                            <h5>De acordo com seu IMC, seu consumo diário deve ser: <b>27 Litros</b></h5>
+                            <h5>De acordo com seu IMC, seu consumo diário deve ser: <b id="water-value"></b></h5>
                         </div>
                     </div>
                 </div>
@@ -90,12 +95,11 @@
                     <div class="user-infos user-metas">
                         <div class="user-metas-content">
                             <div class="meta-iten">
-                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
-                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
-                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
-                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
-                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
-                                <h4 class="iten"><em class="date">19/06/2006</em> - Meu aniversário TesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTesteTeste</h4>
+                                <h4 class="iten"><em class="date">28/02/2024</em> - Comer os nutrientes recomendados para mim</h4>
+                                <h4 class="iten"><em class="date">03/03/2024</em> - Perder 15 kilos</h4>
+                                <h4 class="iten"><em class="date">01/04/2024</em> - Correr 42 km em menos de 3 horas.</h4>
+                                <h4 class="iten"><em class="date">02/04/2024</em> - Percorrer 200 km em um único dia de ciclismo.</h4>
+                                <h4 class="iten"><em class="date">03/04/2024</em> - CrossFit: Completar o desafio "Murph" (1 milha de corrida, 100 flexões, 200 agachamentos, 1 milha de corrida e 100 pull-ups) em menos de 45 minutos.</h4>
                             </div>
                         </div>
                     </div>
@@ -106,11 +110,15 @@
                     <div class="food-content">
                         <div class="user-infos user-foods">
                             <div class="food-iten">
-                                <h3>Jabuticaba - 2307 calorias</h3>
+                                <h3 class="iten">Maçã - 52 calorias</h3>
+                                <h3 class="iten">Melancia - 30 calorias</h3>
+                                <h3 class="iten">Frango - 239 calorias</h3>
+                                <h3 class="iten">Ovo frito - 105 calorias</h3>
                             </div>
                         </div>
                         <div class="user-calories">
-                            <h4><b id="user-calories-number">10000</b> <br>calorias</h4>
+                            <h4><b id="user-calories-number">426</b></h4>
+                            <h4>calorias</h4>
                         </div>
                     </div>
                 </div>
@@ -142,5 +150,6 @@
             </div>
         </div>
     </section>
+    <script src="javascript/script.js"></script>
 </body>
 </html>
